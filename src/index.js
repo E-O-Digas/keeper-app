@@ -11,22 +11,21 @@
 
 //HINT: You will need to study the classes in teh styles.css file to appy styling.
 
-import react from 'react'
+import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import Footer from './components/footer'
 import Header from './components/header'
 import App from './components/App'
 import Note from './components/note'
-import './public/styles.css'
 
 const rootElement=  document.getElementById('root')
 const root= createRoot(rootElement)
 
 root.render(
-    <react.StrictMode>
+    <StrictMode>
         <App/>
         <Header/>
         <Note/>
         <Footer/>
-    </react.StrictMode>
+    </StrictMode>
 )
