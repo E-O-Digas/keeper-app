@@ -16,7 +16,7 @@ import {createRoot} from 'react-dom/client'
 import Footer from './components/footer'
 import Header from './components/header'
 import App from './components/App'
-import Note from './components/note'
+import Cards from './components/Cards'
 
 const rootElement=  document.getElementById('root')
 const root= createRoot(rootElement)
@@ -25,7 +25,7 @@ root.render(
     <StrictMode>
         <App/>
         <Header/>
-        <Note/>
+        <Cards/>
         <Footer/>
     </StrictMode>
 )
