@@ -14,6 +14,14 @@ function App(){
         })
     }
 
+    function deleteItems(id){
+        setItems(prevNotes=> {
+            return prevNotes.filter((noteItems, index)=>{
+                return index !==id
+            })
+        })
+    }
+
     return(
         <>
             <Header/>
@@ -25,6 +33,7 @@ function App(){
                     content={noteItem.content}
                     key={index}
                     id={index}
+                    delItems={deleteItems}
                 />
                 )
             })}

@@ -18,15 +18,19 @@ function Input(props){
 
     function handleClick(e){
         props.onAdd(notes)
+        setNotes({
+            title:'',
+            content:''
+        })
         e.preventDefault()
-        setNotes("")
     }
 
     return(
         <form action="">
             <input name="title" onChange={handleChange} placeholder="Title" value={notes.title}/>
             <textarea name="content" onChange={handleChange} placeholder="Text Area" value={notes.content} rows='3'/>
-            <button onClick={handleClick}>Add</button>
+            <button onClick={handleClick}
+            >Add</button>
         </form>
     )
 }
